@@ -29,6 +29,10 @@ Route::get('login', function () {
 Route::get('/budget','BudgetController@index');
 Route::get('/budget/table','BudgetController@table');
 Route::get('/budget/profile','BudgetController@profile');
+Route::post('/budget/tambah','BudgetController@tambah');
+Route::get('/budget/edit/{id}','BudgetController@edit');
+Route::post('/budget/update','BudgetController@update');
+Route::get('/budget/hapus/{id}','BudgetController@hapus');
 
 
 //route latihan

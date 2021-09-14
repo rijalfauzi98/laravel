@@ -37,7 +37,7 @@
 									<td>{{ $p->pegawai_alamat }}</td>
 
 									<td class="project-actions text-right"><center>
-										<a href="/budget/edit/{{ $p->pegawai_id }}" class="btn btn-info btn-sm" data-toggle="modal" data-target="#edit">
+										<a href="/budget/edit/{{ $p->pegawai_id }}" class="btn btn-info btn-sm">
 											<i class="fas fa-pencil-alt">
 											</i>
 											Edit
@@ -72,45 +72,6 @@
 </div>
 <!-- /.row -->
 </div>
-<!-- /.container-fluid -->
-<div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="card-header card-primary">
-				<h3 class="card-title">Tambah Data</h3>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			</div>
-			<!-- form start -->
-			<form action="/budget/tambah" method="post">
-				{{ csrf_field() }}
-				<div class="card-body">
-					<div class="form-group">
-						<label for="exampleInputText">Nama</label>
-						<input type="text" name="nama" class="form-control" id="exampleInputText" placeholder="Masukan Nama">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputText">Jabatan</label>
-						<input type="text" name="jabatan" class="form-control" id="exampleInputText" placeholder="Masukan Nama">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputText">Umur</label>
-						<input type="text" name="umur" class="form-control" id="exampleInputText" placeholder="Masukan Nama">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputText">Alamat</label>
-						<input type="text" name="alamat" class="form-control" id="exampleInputText" placeholder="Masukan Nama">
-					</div>
-				</div>
-				<!-- /.card-body -->
-				<div class="card-footer">
-					<button type="submit" class="btn btn-primary">Submit</button>
-					<button type="button"  class="btn btn-default float-right" data-dismiss="modal">Close</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-
 <!-- /.container-fluid -->
 <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
