@@ -42,6 +42,7 @@
 											</i>
 											Edit
 										</a>
+										
 										<a class="btn btn-danger btn-sm" href="/budget/hapus/{{ $p->pegawai_id }}">
 											<i class="fas fa-trash">
 											</i>
@@ -112,17 +113,16 @@
 </div>
 
 <!-- /.container-fluid -->
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="card-header card-primary">
 				<h3 class="card-title">Edit Data</h3>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
-			<!-- form start -->
 			
-			@foreach($pegawai as $p)
-			<form action="/budget/update" method="post">
+			<!-- form start -->
+						<form action="/budget/update/{{ $p->pegawai_id }}" method="post">
 				{{ csrf_field() }}
 				<div class="card-body">
 					<div class="form-group">
@@ -149,7 +149,7 @@
 					<button type="button"  class="btn btn-default float-right" data-dismiss="modal">Close</button>
 				</div>
 			</form>
-			@endforeach
+			
 		</div>
 	</div>
 </div>

@@ -45,8 +45,9 @@ class BudgetController extends Controller
 		return view('budget/table',['pegawai' => $pegawai]);
 	}
 
+	
 	// update data pegawai
-	public function update(Request $request)
+	public function update(Request $request, $id)
 	{
 	// update data pegawai
 		DB::table('pegawai')->where('pegawai_id',$request->id)->update([

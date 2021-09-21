@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('index', function () {
+    return view('index');
+});
+
 Route::get('dashboard', function () {
     return view('dashboard');
 });
@@ -30,30 +34,9 @@ Route::get('/budget','BudgetController@index');
 Route::get('/budget/table','BudgetController@table');
 Route::get('/budget/profile','BudgetController@profile');
 Route::post('/budget/tambah','BudgetController@tambah');
-Route::get('/budget/edit/{id}','BudgetController@edit');
+Route::put('/budget/edit/{id}','BudgetController@edit');
 Route::post('/budget/update','BudgetController@update');
 Route::get('/budget/hapus/{id}','BudgetController@hapus');
-
-
-//route latihan
-Route::get('halo', function () {
-	return "Halo, Selamat datang di tutorial laravel www.malasngoding.com";
-});
-
-// Route::get('blog', function () {
-// 	return view('blog');
-// });
-
-Route::get('dosen', 'DosenController@index');
-
-// Route::get('/pegawai/{nama}', 'PegawaiController@index');
-// Route::get('/formulir', 'PegawaiController@formulir');
-// Route::post('/formulir/proses', 'PegawaiController@proses');
-
-// route blog
-Route::get('/blog', 'BlogController@home');
-Route::get('/blog/tentang', 'BlogController@tentang');
-Route::get('/blog/kontak', 'BlogController@kontak');
 
 //route CRUD
 Route::get('/pegawai','PegawaiController@index');
@@ -63,10 +46,31 @@ Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 
-//route LATIHAN 
-Route::get('/user','UserController@index');
-Route::get('/user/tambah','UserController@tambah');
-Route::post('/user/store','UserController@store');
-Route::get('/user/edit/{id}','UserController@edit');
-Route::post('/user/update','UserController@update');
-Route::get('/user/hapus/{id}','UserController@hapus');
+//route master tipe
+Route::get('/master/tipe','TipeController@index');
+Route::get('/master/tipe/tambah','TipeController@tambah');
+Route::post('/master/tipe/store','TipeController@store');
+Route::get('/master/tipe/edit/{id}','TipeController@edit');
+Route::post('/master/tipe/update','TipeController@update');
+Route::get('/master/tipe/hapus/{id}','TipeController@hapus');
+
+//route master klasifikasi
+Route::get('/master/klas','KlasifController@index');
+Route::get('/master/klas/tambah','KlasifController@tambah');
+Route::post('/master/klas/store','KlasifController@store');
+Route::get('/master/klas/edit/{id}','KlasifController@edit');
+Route::post('/master/klas/update','KlasifController@update');
+Route::get('/master/klas/hapus/{id}','KlasifController@hapus');
+
+//route master klasifikasi
+Route::get('/transaksi/rencana','RencanaController@index');
+Route::get('/transaksi/rencana/tambah','RencanaController@tambah');
+Route::post('/transaksi/rencana/store','RencanaController@store');
+Route::get('/transaksi/rencana/edit/{id}','RencanaController@edit');
+Route::post('transaksi/rencana/update','RencanaController@update');
+Route::get('/transaksi/rencana/hapus/{id}','RencanaController@hapus');
+
+// Route::get('/transaksi/rencana/tambah','RencanaController@mtipe');
+// Route::get('/transaksi/rencana/tambah','RencanaController@mklas');
+
+

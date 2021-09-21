@@ -1,85 +1,6 @@
-@extends('budget/template')
-@section('content')
-<section class="content">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-12">
-				<div class="card">
 
-					<br><div class="box-header">
-						<div class="col-md-6" >
-							<button class="form-control btn btn-primary" data-toggle="modal" data-target="#tambah"></i> Tambah Data</button>
-						<!-- 	 <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal1"> <i class='fa fa-plus'></i> Tambah Data</button> -->
-						</div>
-					</div>
-
-					<div class="card-header">
-						<h3 class="card-title">DataTable with default features</h3>
-					</div>
-					<!-- /.card-header -->
-					<div class="card-body">
-						<table id="example" class="table table-bordered table-striped">
-							<thead>
-								<tr>
-									<th>Nama</th>
-									<th>Jabatan</th>
-									<th>Umur</th>
-									<th>Alamat</th>
-									<th>Opsi</th>
-								</tr>
-							</thead>
-							<tbody>
-								@foreach($pegawai as $p)
-								<tr>
-									<td>{{ $p->pegawai_nama }}</td>
-									<td>{{ $p->pegawai_jabatan }}</td>
-									<td>{{ $p->pegawai_umur }}</td>
-									<td>{{ $p->pegawai_alamat }}</td>
-
-									<td class="project-actions text-right"><center>
-										<a href="/budget/edit/{{ $p->pegawai_id }}" class="btn btn-info btn-sm">
-											<i class="fas fa-pencil-alt">
-											</i>
-											Edit
-										</a>
-										<a class="btn btn-danger btn-sm" href="/budget/hapus/{{ $p->pegawai_id }}">
-											<i class="fas fa-trash">
-											</i>
-											Delete
-										</a>
-									</center></td>
-
-								</tr>
-								@endforeach
-
-							</tbody>
-                  <!-- <tfoot>
-                  <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                  </tr>
-              </tfoot> -->
-          </table>
-      </div>
-      <!-- /.card-body -->
-  </div>
-  <!-- /.card -->
-</div>
-<!-- /.col -->
-</div>
-<!-- /.row -->
-</div>
 <!-- /.container-fluid -->
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="card-header card-primary">
-				<h3 class="card-title">Edit Data</h3>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			</div>
+
 			<!-- form start -->
 			
 			@foreach($pegawai as $p)
@@ -111,11 +32,5 @@
 				</div>
 			</form>
 			@endforeach
-		</div>
-	</div>
-</div>
 
-</section>
-
-@endsection
 
