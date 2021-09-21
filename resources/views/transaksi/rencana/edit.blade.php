@@ -37,7 +37,7 @@
           </div>
           <div class="col-sm-4">
             <div class="form-group">
-              <label class="col-form-label" for="inputWarning"><i class=""></i> Tanggal Buat</label>
+              <label class="col-form-label" for="inputWarning"><i class=""></i> Tanggal Buatt</label>
               <!-- <label>Tanggal Buat</label> -->
               <input type="date" name="tglbuat" value="{{ date('Y-m-d') }}"  class="form-control">
             </div>
